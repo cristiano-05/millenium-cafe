@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафе Миллениум — уютное кафе в Москве</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/coffee-to-go.png" type="image/png">
+    <style>html{scroll-behavior:smooth;}</style>
+</head>
+<body>
+
+    <!-- Шапка с WhatsApp и звонком -->
+    <nav class="navbar-clean">
+        <div class="container nav-flex">
+            <ul class="nav-center">
+                <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="menu.html"><i class="fas fa-utensils"></i> Меню</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> О нас</a></li>
+                <li><a href="#contacts"><i class="fas fa-phone"></i> Контакты</a></li>
+            </ul>
+            <div class="quick-contact">
+                <a href="tel:+79262564683" class="quick-btn"><i class="fas fa-phone"></i></a>
+                <a href="https://wa.me/79262564683" class="quick-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный экран со слайдером -->
+    <header class="hero">
+        <div class="slider">
+            <div class="slide active"><img src="https://images.unsplash.com/photo-1517248135467-2c7ed3bc1d9f?w=1600" alt="Интерьер"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1554110396-4b1165dc4b84?w=1600" alt="Кофе"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=1600" alt="Еда"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1495474472287-4d71bc168240?w=1600" alt="Атмосфера"></div>
+        </div>
+        <div class="hero-overlay">
+            <div class="container hero-content">
+                <h1>Кафе Миллениум</h1>
+                <p>Свежая выпечка • Ароматный кофе • Уютная атмосфера</p>
+                <a href="menu.html" class="big-btn">Посмотреть меню</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section about-clean">
+        <div class="container">
+            <h2>О нас</h2>
+            <div class="about-text-only">
+                <p class="large">Кафе Миллениум — место, где начинается хороший день.</p>
+                <p>Уютное кафе на Каширском шоссе. Изумительные блюда, ароматный кофе и атмосфера, в которую хочется возвращаться снова и снова.</p>
+                <p class="highlight">Работаем для вас ежедневно<br><strong>с 9:00 до 21:30</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="section">
+        <div class="container">
+            <h2>Контакты</h2>
+            <div class="contacts-grid">
+                <p><i class="fas fa-map-marker-alt"></i> Москва, Каширское шоссе 55А</p>
+                <p><i class="fas fa-phone"></i> +7 (926) 256-46-83</p>
+                <p><i class="fab fa-instagram"></i> @robertkadiev</p>
+            </div>
+            <div style="text-align:center; margin:50px 0;">
+                <a href="tel:+79262564683" class="big-btn-center">Забронировать столик</a>
+            </div>
+            <div class="map">
+                <iframe src="https://yandex.ru/map-widget/v1/?oid=88845253216&ol=biz&lang=ru_RU" width="100%" height="450" frameborder="0" allowfullscreen="true"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Кафе Миллениум</p>
+        </div>
+    </footer>
+
+    <script>
+        // Автосмена слайдов
+        let current = 0;
+        const slides = document.querySelectorAll('.slide');
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 5000);
+    </script>
+</body>
+</html>
