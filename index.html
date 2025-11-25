@@ -6,12 +6,10 @@
     <title>Кафе Миллениум — уютное кафе в Москве</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" href="https://img.icons8.com/fluency/48/coffee-to-go.png" type="image/png">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/coffee-to-go.png">
     <style>html{scroll-behavior:smooth;}</style>
 </head>
 <body>
-
-    <!-- Шапка с WhatsApp и звонком -->
     <nav class="navbar-clean">
         <div class="container nav-flex">
             <ul class="nav-center">
@@ -27,13 +25,12 @@
         </div>
     </nav>
 
-    <!-- Главный экран со слайдером -->
     <header class="hero">
         <div class="slider">
-            <div class="slide active"><img src="https://images.unsplash.com/photo-1517248135467-2c7ed3bc1d9f?w=1600" alt="Интерьер"></div>
-            <div class="slide"><img src="https://images.unsplash.com/photo-1554110396-4b1165dc4b84?w=1600" alt="Кофе"></div>
-            <div class="slide"><img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=1600" alt="Еда"></div>
-            <div class="slide"><img src="https://images.unsplash.com/photo-1495474472287-4d71bc168240?w=1600" alt="Атмосфера"></div>
+            <div class="slide active"><img src="https://images.unsplash.com/photo-1517248135467-2c7ed3bc1d9f?w=1600" alt=""></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1554110396-4b1165dc4b84?w=1600" alt=""></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=1600" alt=""></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1495474472287-4d71bc168240?w=1600" alt=""></div>
         </div>
         <div class="hero-overlay">
             <div class="container hero-content">
@@ -63,29 +60,24 @@
                 <p><i class="fas fa-phone"></i> +7 (926) 256-46-83</p>
                 <p><i class="fab fa-instagram"></i> @robertkadiev</p>
             </div>
-            <div style="text-align:center; margin:50px 0;">
+            <div style="text-align:center;margin:50px 0">
                 <a href="tel:+79262564683" class="big-btn-center">Забронировать столик</a>
             </div>
             <div class="map">
-                <iframe src="https://yandex.ru/map-widget/v1/?oid=88845253216&ol=biz&lang=ru_RU" width="100%" height="450" frameborder="0" allowfullscreen="true"></iframe>
+                <iframe src="https://yandex.ru/map-widget/v1/?oid=88845253216&ol=biz&lang=ru_RU" width="100%" height="450" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 Кафе Миллениум</p>
-        </div>
-    </footer>
+    <footer><div class="container"><p>© 2025 Кафе Миллениум</p></div></footer>
 
     <script>
-        // Автосмена слайдов
-        let current = 0;
+        let i = 0;
         const slides = document.querySelectorAll('.slide');
         setInterval(() => {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
+            slides[i].classList.remove('active');
+            i = (i + 1) % slides.length;
+            slides[i].classList.add('active');
         }, 5000);
     </script>
 </body>
